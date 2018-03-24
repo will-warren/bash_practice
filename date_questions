@@ -1,0 +1,39 @@
+#!/bin/bash
+
+echo Where are you from?
+wait
+echo Where did you go to school?
+
+echo What do you do?
+ 
+echo What do you do for fun?
+
+echo What is your favorite room in a house?
+
+echo Do you smoke?
+
+echo Do you want children?
+
+echo Is magerita is only real pizza?
+
+echo Should dogs wear clothes?
+
+echo Is marriage a dying instition?
+
+echo Do we need pants?
+
+echo What is bitcoin?
+
+echo Would you rather live in cold but amazing city, or a warm but slow town?
+
+echo Is money a thing to enjoy or a think to look at?
+
+echo Why are poor people poor?
+
+echo What does feminism mean to you?
+
+echo True or False: Guauc should be extra?
+
+echo What\'s been your wildest travel adventure?
+
+echo Do you believe in love at first sight?
