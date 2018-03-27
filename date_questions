@@ -1,39 +1,129 @@
 #!/bin/bash
 
 echo Where are you from?
-wait
+read HOME
+echo 1. $HOME > date_questions.txt
+
 echo Where did you go to school?
+read SCHOOL
+echo 2. $SCHOOL >> date_questions.txt
 
 echo What do you do?
+read JOB
+echo 3. $JOB >> date_questions.txt
  
 echo What do you do for fun?
+read HOBBY
+echo 4. $HOBBY >> date_question.txt
 
 echo What is your favorite room in a house?
+read ROOM
+echo 5. $ROOM >> date_questions.txt
 
-echo Do you smoke?
+echo Do you smoke \(y/n\)?
+read SMOKE
+if [ $SMOKE = y ]
+then
+    echo 6. Is a smoker. >> date_questions.txt
+else
+    echo 7. Is not a smoker. >> date_questions.txt
+fi
 
-echo Do you want children?
+echo Do you want children \(y/n\)?
+read KIDS
+if [ $KIDS = y ]
+then
+    echo 7. Wants Children >> date_questions.txt
+else
+    echo 7. Doesn\'t want children >> date_questions.txt
+fi 
 
-echo Is magerita is only real pizza?
+echo Is magerita is only real pizza \(y/n\)?
+read PIZZA
+if [ $PIZZA = y ]
+then
+    echo 8. Magerita is the only real pizza >> date_questions.txt
+else
+    echo 8. Magerita isn\'t the only real pizza >> date_questions.txt
+fi
 
-echo Should dogs wear clothes?
+echo Should dogs wear clothes \(y/n\)?
+read DOGS
+if [ $DOGS = y ]
+then
+    echo 9. Dogs should wear clothes >> date_questions.txt
+else
+    echo 9. Dogs shouldn\'t wear clothes >> date_questions.txt
+fi
 
-echo Is marriage a dying instition?
+echo Is marriage a dying institution \(y/n\)?
+read MARRIAGE
+if [ $MARRIAGE = y ]
+then
+    echo 10. Marriage is a dying institution. >> date_questions.txt
+else
+    echo 10. Marriage is not a dying institution. >> date_questions.txt
+fi
 
-echo Do we need pants?
+echo Do we need pants \(y/n\)?
+read PANTS
+if [ $PANTS = y ]
+then
+    echo 11. Pants are needed. >> date_questions.txt
+else
+    echo 11. Pants are not needed. >> date_questions.txt
+fi
 
 echo What is bitcoin?
+read BITCOIN
+echo 12. Bitcoin is $BITCOIN >> date_questions.txt
 
 echo Would you rather live in cold but amazing city, or a warm but slow town?
+read LIVE
+echo 13. $LIVE >> date_questions.txt
 
 echo Is money a thing to enjoy or a think to look at?
+read MONEY
+echo 14. $MONEY >> date_questions.txt
 
 echo Why are poor people poor?
+read POOR
+echo 15. $POOR >> date_questions.txt
 
 echo What does feminism mean to you?
+read FEMINISM
+echo 16. $FEMINISM >> date_questions.txt
 
-echo True or False: Guauc should be extra?
+echo True or False: Should guac be extra?
+read GUAC
+if [ $GUAC = true ]
+then
+    echo 17. Guac should be extra. >> date_questions.txt
+else
+    echo 17. Guac should not be extra. >> date_questions.txt
+fi
 
 echo What\'s been your wildest travel adventure?
+read TRAVEL
+echo 18. $TRAVEL >> date_questions.txt
 
-echo Do you believe in love at first sight?
+echo Do you believe in love at first sight \(y/n\)?
+read DATE
+if [ $DATE = y ]
+then
+    echo 19. Belives in love at first sight >> date_questions.txt
+else
+    echo 19. Does not believe in love at first sight. >> date_questions.txt
+fi
+
+
+echo How much do you normally tip for average service?
+read TIP
+echo 20. $TIP >> date_questions.txt
+
+echo
+echo
+echo Answers:
+echo
+cat date_questions.txt
+
