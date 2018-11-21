@@ -6,6 +6,16 @@
 #
 # covers basic set up
 
+echo "Checking required parameters...\n"
+if [[ ! -n "$1" ]] && [[ ! -n "$2" ]]; then
+	do echo "Missing required parameters: full name in quotes and email without quotes"
+	done
+else
+	do echo "Required paramters are set...continue!\n"
+fi
+ 
+# throw error if missing req params
+
 echo "Beginning Config...\n\n"
 
 # homebrew & basics
@@ -26,7 +36,7 @@ PACKAGES=(
 )
 
 echo "Installing packages...\n"
-brew install${PACKAGES[@]}
+brew install ${PACKAGES[@]}
 
 echo "Cleaning up...\n"
 brew install caskroom/cask/brew-cask
@@ -69,7 +79,7 @@ mkdir Utils
 mkdir DrawingBoard
 
 # write a few aliases
-ALIASES=( ["gstat"]="git status"
+declare -A ALIASES=( ["gstat"]="git status"
 	  ["gchk"]="git checkout"
 	  ["gcmt"]="git commit -m"
    	  ["gadda"]="git add ."
