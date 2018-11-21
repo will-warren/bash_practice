@@ -55,7 +55,7 @@ echo "Installing Oh My Zsh...\n"
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
 
 ## add nvm to .zshrc
-export NVM_DIR="$HOME/.nvm" [ -s "$NVM_DIR/nvm.sh" ] && \.'$NVM_DIR/nvm.sh" >> ~/.zshrch
+export NVM_DIR="$HOME/.nvm" [ -s "$NVM_DIR/nvm.sh" ] && \."$NVM_DIR/nvm.sh" >> ~/.zshrch
 
 
 # make workspaces
