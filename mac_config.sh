@@ -6,10 +6,14 @@
 #
 # covers basic set up
 
+# fail out if error thrown
+set -e
+trap 'echo "\"${last_command}\" failed with code $?"' EXIT
+
 echo "Checking required parameters...\n"
 if [[ ! -n "$1" ]] && [[ ! -n "$2" ]]; then
-	do echo "Missing required parameters: full name in quotes and email without quotes"
-	done
+	do echo "Missing required parameters: 'full name' & email (no quotes) $?"
+	exit 1
 else
 	do echo "Required paramters are set...continue!\n"
 fi
